@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scooty / Motorcycle Driving School in Noida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #334155;
+    background-color: #f8fafc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Navigation */
+.navigation {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-logo {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-title {
+    color: white;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-button {
+    background: white;
+    color: #1e40af;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #f1f5f9;
+    transform: translateY(-1px);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1e40af;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mobile-nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-button {
+    background: white;
+    color: #1e40af;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.floating-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-element {
+    position: absolute;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.shape-3 {
+    width: 60px;
+    height: 60px;
+    top: 10%;
+    right: 20%;
+    animation-delay: 2s;
+}
+
+.shape-4 {
+    width: 100px;
+    height: 100px;
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 3s;
+}
+
+.shape-5 {
+    width: 70px;
+    height: 70px;
+    top: 40%;
+    left: 5%;
+    animation-delay: 4s;
+}
+
+.shape-6 {
+    width: 90px;
+    height: 90px;
+    bottom: 10%;
+    right: 10%;
+    animation-delay: 5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(120deg); }
+    66% { transform: translateY(10px) rotate(240deg); }
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    z-index: 10;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-highlight {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    display: inline-block;
+}
+
+.title-underline {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    border-radius: 2px;
+    animation: expandWidth 2s ease-out;
+}
+
+@keyframes expandWidth {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid #3b82f6;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #3b82f6;
+    transform: translateY(-2px);
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #3b82f6;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.section-title.white-text {
+    color: white;
+}
+
+.section-description {
+    font-size: 1.125rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-description.gray-text {
+    color: #94a3b8;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.contact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.phone-icon {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.email-icon {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.location-icon {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.hours-icon {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.contact-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.contact-detail {
+    color: #64748b;
+    margin-bottom: 0.25rem;
+}
+
+.phone-number {
+    font-size: 16px !important;
+}
+
+/* Contact Form */
+.contact-form-container {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-submit-btn {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+/* Services Section */
+.services-section {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.service-card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.service-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 400px;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.service-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.price-amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #3b82f6;
+}
+
+.price-label {
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Carousel Section */
+.carousel-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.slide-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 2rem;
+}
+
+.slide-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.slide-description {
+    color: #cbd5e1;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-prev {
+    left: 20px;
+}
+
+.carousel-next {
+    right: 20px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #cbd5e1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+    background: #3b82f6;
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.blue-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.green-gradient {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.yellow-gradient {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.purple-gradient {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.stat-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.stat-description {
+    color: #cbd5e1;
+    font-size: 0.875rem;
+}
+
+.credentials-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-wrap: wrap;
+}
+
+.credential-item {
+    text-align: center;
+}
+
+.credential-title {
+    font-weight: 700;
+    color: white;
+    font-size: 1.125rem;
+}
+
+.credential-subtitle {
+    color: #cbd5e1;
+    font-size: 0.875rem;
+}
+
+.credential-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Footer */
+.footer {
+    background: #0f172a;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand {
+    max-width: 400px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.footer-description {
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.footer-section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-link-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-link {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #94a3b8;
+}
+
+.footer-contact-item svg {
+    color: #3b82f6;
+}
+
+.footer-bottom {
+    border-top: 1px solid #334155;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.footer-copyright {
+    color: #94a3b8;
+}
+
+.footer-bottom-link {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-link:hover {
+    color: white;
+}
+
+/* Floating Call Button */
+.floating-call-btn {
+    position: fixed;
+    background: #fbbf24;
+    color: #000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: bounce 2s infinite;
+    transition: all 1s ease-in-out;
+}
+
+.floating-call-btn:hover {
+    background: #f59e0b;
+    transform: scale(1.05);
+}
+
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    40%, 43% {
+        transform: translate(-50%, -50%) translateY(-10px);
+    }
+    70% {
+        transform: translate(-50%, -50%) translateY(-5px);
+    }
+    90% {
+        transform: translate(-50%, -50%) translateY(-2px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links,
+    .nav-button {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .credentials-bar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .credential-divider {
+        width: 40px;
+        height: 1px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-prev {
+        left: 10px;
+    }
+
+    .carousel-next {
+        right: 10px;
+    }
+
+    .floating-call-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .service-card {
+        padding: 2rem 1rem;
+    }
+
+    .price-amount {
+        font-size: 2.5rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.focused .form-label {
+    color: #3b82f6;
+    transform: translateY(-2px);
+}
+
+.loaded .floating-element {
+    animation-play-state: running;
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="nav-logo">
+                    <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+                        <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                    </svg>
+                </div>
+                <span class="nav-title">Scooty / Motorcycle Driving School in Noida</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <button class="nav-button" onclick="scrollToSection('#contact')">Book Lesson</button>
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="mobile-nav-link" onclick="scrollToSection('#home')">Home</a>
+            <a href="#contact" class="mobile-nav-link" onclick="scrollToSection('#contact')">Contact</a>
+            <button class="mobile-nav-button" onclick="scrollToSection('#contact')">Book Lesson</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="floating-shapes">
+            <div class="floating-element shape-1"></div>
+            <div class="floating-element shape-2"></div>
+            <div class="floating-element shape-3"></div>
+            <div class="floating-element shape-4"></div>
+            <div class="floating-element shape-5"></div>
+            <div class="floating-element shape-6"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Master the Road with
+                    <span class="hero-highlight">
+                        Scooty / Motorcycle Driving School in Noida
+                        <div class="title-underline"></div>
+                    </span>
+                </h1>
+                <p class="hero-description">
+                    Professional driving instruction with cutting-edge 3D simulation technology. 
+                    Learn from certified experts in a safe, supportive environment.
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('#contact')">
+                        Start Your Journey
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('#services')">
+                        View Courses
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Students Certified</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Pass Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-description">Get in touch with us today to schedule your driving lessons.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-cards">
+                        <div class="contact-card phone-card">
+                            <div class="contact-icon phone-icon">
+                                <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="contact-title">Phone</h3>
+                            <p class="contact-detail phone-number">7004940519</p>
+                        </div>
+                        
+                        <div class="contact-card email-card">
+                            <div class="contact-icon email-icon">
+                                <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="contact-title">Email</h3>
+                            <p class="contact-detail">saxenagautam89@gmail.com</p>
+                        </div>
+                        
+                        <div class="contact-card location-card">
+                            <div class="contact-icon location-icon">
+                                <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <h3 class="contact-title">Location</h3>
+                            <p class="contact-detail">Noida/Delhi NCR</p>
+                        </div>
+                        
+                        <div class="contact-card hours-card">
+                            <div class="contact-icon hours-icon">
+                                <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+                                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+                                    <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                </svg>
+                            </div>
+                            <h3 class="contact-title">Hours</h3>
+                            <p class="contact-detail">Mon-Fri: 8AM-7PM</p>
+                            <p class="contact-detail">Sat-Sun: 9AM-5PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3 class="form-title">Send Us a Message</h3>
+                    <form class="contact-form" onsubmit="submitForm(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-input" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-input" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-input" placeholder="(555) 123-4567" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Course Interest</label>
+                            <select class="form-select" required>
+                                <option value="">Select a course</option>
+                                <option value="basic">Basic Package</option>
+                                <option value="premium">Premium Package</option>
+                                <option value="professional">Professional Package</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-textarea" rows="4" placeholder="Tell us about your goals and any questions you have..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Driving Services</h2>
+            </div>
+            
+            <div class="service-card-container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
+                            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Scooty / Motorcycle Driving School</h3>
+                    <div class="service-price">
+                        <span class="price-amount">₹2000</span>
+                        <div class="price-label">Complete Course</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Driving Carousel -->
+    <section class="carousel-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See Our Training in Action</h2>
+                <p class="section-description">Experience the quality of our driving instruction through real moments from our training sessions.</p>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slides" id="carouselSlides">
+                        <div class="carousel-slide active">
+                            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" alt="Student learning to drive with instructor">
+                            <div class="slide-overlay">
+                                <h3 class="slide-title">Professional Instruction</h3>
+                                <p class="slide-description">Student learning to drive with instructor</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" alt="Modern driving school classroom">
+                            <div class="slide-overlay">
+                                <h3 class="slide-title">State-of-the-Art Facilities</h3>
+                                <p class="slide-description">Modern driving school classroom</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" alt="Highway driving lesson">
+                            <div class="slide-overlay">
+                                <h3 class="slide-title">Highway Training</h3>
+                                <p class="slide-description">Highway driving lesson</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1551818255-e6e10975cd5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" alt="City driving practice">
+                            <div class="slide-overlay">
+                                <h3 class="slide-title">City Driving Skills</h3>
+                                <p class="slide-description">City driving practice</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1550355191-aa8a80b41353?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" alt="Parallel parking practice">
+                            <div class="slide-overlay">
+                                <h3 class="slide-title">Parking & Maneuvering</h3>
+                                <p class="slide-description">Parallel parking practice</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-prev" onclick="changeSlide(-1)">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-next" onclick="changeSlide(1)">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                </button>
+                
+                <div class="carousel-dots">
+                    <button class="carousel-dot active" onclick="goToSlide(0)"></button>
+                    <button class="carousel-dot" onclick="goToSlide(1)"></button>
+                    <button class="carousel-dot" onclick="goToSlide(2)"></button>
+                    <button class="carousel-dot" onclick="goToSlide(3)"></button>
+                    <button class="carousel-dot" onclick="goToSlide(4)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title white-text">Our Track Record</h2>
+                <p class="section-description gray-text">Numbers that speak for themselves - see why thousands of students choose our driving school.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue-gradient">
+                        <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
+                            <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A2.987 2.987 0 0 0 17.5 7h-3c-1.66 0-3 1.34-3 3 0 1.31.84 2.41 2 2.83V18H9.5l3.5-14h2l3.5 14H20z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number">500+</div>
+                    <h3 class="stat-title">Students Certified</h3>
+                    <p class="stat-description">Successfully trained and certified drivers</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon green-gradient">
+                        <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number">99%</div>
+                    <h3 class="stat-title">Pass Rate</h3>
+                    <p class="stat-description">Students who pass their driving test on first try</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon yellow-gradient">
+                        <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
+                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+                            <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number">15+</div>
+                    <h3 class="stat-title">Years Experience</h3>
+                    <p class="stat-description">Providing quality driving education since 2008</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon purple-gradient">
+                        <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number">4.9</div>
+                    <h3 class="stat-title">Star Rating</h3>
+                    <p class="stat-description">Average rating from our satisfied students</p>
+                </div>
+            </div>
+            
+            <div class="credentials-bar">
+                <div class="credential-item">
+                    <div class="credential-title">Licensed</div>
+                    <div class="credential-subtitle">DMV Approved</div>
+                </div>
+                <div class="credential-divider"></div>
+                <div class="credential-item">
+                    <div class="credential-title">Insured</div>
+                    <div class="credential-subtitle">Fully Protected</div>
+                </div>
+                <div class="credential-divider"></div>
+                <div class="credential-item">
+                    <div class="credential-title">Certified</div>
+                    <div class="credential-subtitle">Expert Instructors</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+                                <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                            </svg>
+                        </div>
+                        <span class="footer-title">Scooty / Motorcycle Driving School in Noida</span>
+                    </div>
+                    <p class="footer-description">
+                        Leading the future of driver education with innovative 3D technology and experienced instruction.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.219-5.160 1.219-5.160s-.31-.219-.31-1.416c0-1.326.77-2.313 1.729-2.313.815 0 1.209.613 1.209 1.346 0 .219-.105.937-.219 1.416-.219.937.469 1.719 1.386 1.719 1.667 0 2.947-1.758 2.947-4.292 0-2.244-1.614-3.815-3.923-3.815-2.671 0-4.244 2.004-4.244 4.072 0 .811.15 1.416.469 1.875.052.219.052.219 0 .469-.052.219-.219.811-.271 1.030-.052.311-.219.375-.469.219-1.302-.613-2.115-2.544-2.115-4.072 0-3.355 2.437-6.435 7.022-6.435 3.694 0 6.566 2.629 6.566 6.146 0 3.67-2.313 6.623-5.522 6.623-1.075 0-2.089-.563-2.437-1.230 0 0-.521 1.983-.646 2.479-.219.937-.811 2.115-1.230 2.833C9.975 23.738 10.975 24.001 12.017 24.001c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-section-title">Quick Links</h3>
+                    <ul class="footer-link-list">
+                        <li><a href="#home" class="footer-link" onclick="scrollToSection('#home')">Home</a></li>
+                        <li><a href="#contact" class="footer-link" onclick="scrollToSection('#contact')">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-section-title">Contact Info</h3>
+                    <div class="footer-contact-list">
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Noida/Delhi NCR</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <span class="phone-number">7004940519</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <span>saxenagautam89@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 Scooty / Motorcycle Driving School in Noida. All rights reserved. | 
+                    <a href="#" class="footer-bottom-link">Privacy Policy</a> | 
+                    <a href="#" class="footer-bottom-link">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button -->
+    <button id="floatingCallBtn" class="floating-call-btn" onclick="makeCall()" style="display: none;">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        Call us @7004940519
+    </button>
+
+    <script>
+// Global variables
+let currentSlide = 0;
+const totalSlides = 5;
+
+// Mobile menu functionality
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('show');
+}
+
+// Smooth scrolling to sections
+function scrollToSection(sectionId) {
+    const element = document.querySelector(sectionId);
+    if (element) {
+        element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+    // Close mobile menu if open
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.remove('show');
+}
+
+// Carousel functionality
+function changeSlide(direction) {
+    const slides = document.getElementById('carouselSlides');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    // Remove active class from current slide and dot
+    dots[currentSlide].classList.remove('active');
+    
+    // Calculate new slide index
+    currentSlide += direction;
+    
+    // Wrap around if necessary
+    if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    }
+    
+    // Update slide position
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Update active dot
+    dots[currentSlide].classList.add('active');
+}
+
+function goToSlide(slideIndex) {
+    const slides = document.getElementById('carouselSlides');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    // Remove active class from current dot
+    dots[currentSlide].classList.remove('active');
+    
+    // Update current slide
+    currentSlide = slideIndex;
+    
+    // Update slide position
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Update active dot
+    dots[currentSlide].classList.add('active');
+}
+
+// Auto-advance carousel
+function autoAdvanceCarousel() {
+    changeSlide(1);
+}
+
+// Contact form submission
+function submitForm(event) {
+    event.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(event.target);
+    const firstName = formData.get('firstName') || event.target.querySelector('input[type="text"]').value;
+    const lastName = formData.get('lastName') || event.target.querySelectorAll('input[type="text"]')[1].value;
+    const email = formData.get('email') || event.target.querySelector('input[type="email"]').value;
+    const phone = formData.get('phone') || event.target.querySelector('input[type="tel"]').value;
+    const course = formData.get('course') || event.target.querySelector('select').value;
+    const message = formData.get('message') || event.target.querySelector('textarea').value;
+    
+    // Simple validation
+    if (!firstName || !lastName || !email || !phone || !course || !message) {
+        alert('Please fill in all fields');
+        return;
+    }
+    
+    // Show success message
+    alert('Thank you for your message! We will contact you soon.');
+    
+    // Reset form
+    event.target.reset();
+}
+
+// Floating call button functionality
+function makeCall() {
+    window.open('tel:7004940519', '_self');
+}
+
+// Initialize floating call button
+function initFloatingCallButton() {
+    const floatingBtn = document.getElementById('floatingCallBtn');
+    
+    // Show button after 2 seconds
+    setTimeout(() => {
+        floatingBtn.style.display = 'flex';
+        positionFloatingButton();
+    }, 2000);
+    
+    // Change position every 10 seconds
+    setInterval(() => {
+        positionFloatingButton();
+    }, 10000);
+}
+
+function positionFloatingButton() {
+    const floatingBtn = document.getElementById('floatingCallBtn');
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    
+    // Calculate random position (10% to 80% of viewport)
+    const randomTop = Math.random() * 70 + 10; // 10% to 80%
+    const randomLeft = Math.random() * 70 + 10; // 10% to 80%
+    
+    // Apply position
+    floatingBtn.style.top = `${randomTop}%`;
+    floatingBtn.style.left = `${randomLeft}%`;
+}
+
+// Scroll animations
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animatedElements = document.querySelectorAll('.contact-card, .service-card, .stat-card');
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+}
+
+// Counter animation for stats
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.textContent.replace(/[^0-9]/g, ''));
+                let current = 0;
+                const increment = target / 100;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current) + (counter.textContent.includes('%') ? '%' : '+');
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = counter.textContent;
+                    }
+                };
+                
+                updateCounter();
+                observer.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => observer.observe(counter));
+}
+
+// Parallax effect for floating shapes
+function initParallaxEffect() {
+    const shapes = document.querySelectorAll('.floating-element');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        
+        shapes.forEach((shape, index) => {
+            const speed = (index + 1) * 0.1;
+            shape.style.transform = `translateY(${rate * speed}px) rotate(${scrolled * speed * 0.1}deg)`;
+        });
+    });
+}
+
+// Navigation scroll effect
+function initNavigationScroll() {
+    const nav = document.querySelector('.navigation');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            nav.style.background = 'rgba(30, 64, 175, 0.95)';
+            nav.style.backdropFilter = 'blur(10px)';
+        } else {
+            nav.style.background = 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)';
+            nav.style.backdropFilter = 'none';
+        }
+    });
+}
+
+// Form input animations
+function initFormAnimations() {
+    const inputs = document.querySelectorAll('.form-input, .form-select, .form-textarea');
+    
+    inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            input.parentElement.classList.add('focused');
+        });
+        
+        input.addEventListener('blur', () => {
+            if (input.value === '') {
+                input.parentElement.classList.remove('focused');
+            }
+        });
+    });
+}
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize carousel auto-advance
+    setInterval(autoAdvanceCarousel, 5000);
+    
+    // Initialize floating call button
+    initFloatingCallButton();
+    
+    // Initialize scroll animations
+    initScrollAnimations();
+    
+    // Initialize counter animations
+    animateCounters();
+    
+    // Initialize parallax effects
+    initParallaxEffect();
+    
+    // Initialize navigation scroll effect
+    initNavigationScroll();
+    
+    // Initialize form animations
+    initFormAnimations();
+    
+    // Handle window resize for responsive design
+    window.addEventListener('resize', () => {
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (window.innerWidth > 768) {
+            mobileMenu.classList.remove('show');
+        }
+    });
+    
+    // Add smooth scrolling to all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Add keyboard navigation for carousel
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            changeSlide(-1);
+        } else if (e.key === 'ArrowRight') {
+            changeSlide(1);
+        }
+    });
+    
+    // Add touch/swipe support for carousel
+    let startX = 0;
+    let endX = 0;
+    
+    const carouselWrapper = document.querySelector('.carousel-wrapper');
+    
+    carouselWrapper.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+    
+    carouselWrapper.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = startX - endX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                changeSlide(1); // Swipe left, go to next slide
+            } else {
+                changeSlide(-1); // Swipe right, go to previous slide
+            }
+        }
+    }
+});
+
+// Add loading animation
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+    
+    // Animate hero elements
+    const heroTitle = document.querySelector('.hero-title');
+    const heroDescription = document.querySelector('.hero-description');
+    const heroButtons = document.querySelector('.hero-buttons');
+    
+    if (heroTitle) {
+        heroTitle.style.animation = 'fadeInUp 1s ease 0.2s both';
+    }
+    if (heroDescription) {
+        heroDescription.style.animation = 'fadeInUp 1s ease 0.4s both';
+    }
+    if (heroButtons) {
+        heroButtons.style.animation = 'fadeInUp 1s ease 0.6s both';
+    }
+});
+    </script>
+</body>
+</html>
